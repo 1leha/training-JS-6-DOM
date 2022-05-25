@@ -101,11 +101,28 @@ h6 {
 
 .text-input {
   outline: solid black 1px;
+  height: 30px;
+  width: 200px;
+}
+
+.click-me {
+  width: 200px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.click-me:hover {
+  background-color: rgb(222, 240, 240);
 }
 
 .result {
+  width: 410px;
   margin-top: 30px;
   font-size: 20px;
+  padding: 20px;
+
+  text-align: center;
 
   background-color: #bbbbbb;
 }
