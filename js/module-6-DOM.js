@@ -70,20 +70,51 @@ imgDemo.before(newDiv);
 
 //! InnerHTML
 // console.log(newDiv.innerHTML);
-console.log(title.innerHTML);
-// console.log(input.value);
+// console.log(title.innerHTML);
+// // console.log(input.value);
 
-title.innerHTML = 'ALEX <br> BRO';
-console.log(title.innerHTML);
+// title.innerHTML = 'ALEX <br> BRO';
+// console.log(title.innerHTML);
 
-console.log(list.firstElementChild.innerHTML);
-list.firstElementChild.innerHTML = '<a href="">linked first element</a>';
-list.firstElementChild.nextElementSibling.innerHTML = '<a href="">linked second element</a>';
-list.children[2].innerHTML = '<button type="button">buttoned third element</button>';
+// console.log(list.firstElementChild.innerHTML);
+// list.firstElementChild.innerHTML = '<a href="">linked first element</a>';
+// list.firstElementChild.nextElementSibling.innerHTML = '<a href="">linked second element</a>';
+// list.children[2].innerHTML = '<button type="button">buttoned third element</button>';
+// console.log(list.children[2].innerHTML);
+// console.log(list.firstElementChild.innerHTML);
 
-console.log(list.children[2].innerHTML);
+//! Getting attributes
 
-console.log(list.firstElementChild.innerHTML);
+// console.log(imgDemo.src);
+
+// console.log(imgDemo.alt);
+// imgDemo.alt = 'pet dog';
+// console.log(imgDemo.alt);
+
+// imgDemo.width = '400';
+// let degrise = 100;
+// imgDemo.style.cssText = `transform: rotateZ(${degrise}deg)`;
+
+const curPageUrl = '/item2';
+const neededEl = list.querySelector(`.list__link[href="${curPageUrl}"]`);
+neededEl.classList.add('list__link--active');
+console.log(neededEl);
+console.log(list.children.length);
+
+// console.log(button.dataset.test);
+
+//! insertAdjacentHTML();
+// const listTitle = 'My List';
+// const beforeFirstEl = 'before First El';
+// const afterLastEl = 'after Last El';
+// const afterListtext = 'Text after the list';
+
+// list.insertAdjacentHTML('beforebegin', `<h2>${listTitle}</h2>`);
+// list.insertAdjacentHTML('afterbegin', `<li>${beforeFirstEl}</li>`);
+// list.insertAdjacentHTML('beforeend', `<li>${afterLastEl}</li>`);
+// list.insertAdjacentHTML('afterend', `<h3>${afterListtext}</h3>`);
+
+//! Events
 
 // button.addEventListener('click', () => {
 //   result.textContent = input.value;
