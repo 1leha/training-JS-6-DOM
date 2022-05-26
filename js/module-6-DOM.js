@@ -15,7 +15,7 @@ const imgDemo = document.querySelector('.img');
 const button = document.querySelector('button[data-action="setResult"]');
 
 const input = document.querySelector('.text-input');
-console.log(input);
+// console.log(input);
 
 // console.log(body.querySelectorAll('.list__item'));
 
@@ -47,7 +47,7 @@ result.textContent = input.innerHTML;
 // input.value = '';
 // console.log(img.getAttribute('alt'));
 
-console.log(button.dataset.action);
+// console.log(button.dataset.action);
 //!---------------------------------------------------------------------------------
 //!---------------------------------------------------------------------------------
 
@@ -95,11 +95,11 @@ imgDemo.before(newDiv);
 // let degrise = 100;
 // imgDemo.style.cssText = `transform: rotateZ(${degrise}deg)`;
 
-const curPageUrl = '/item2';
-const neededEl = list.querySelector(`.list__link[href="${curPageUrl}"]`);
-neededEl.classList.add('list__link--active');
-console.log(neededEl);
-console.log(list.children.length);
+// const curPageUrl = '/item2';
+// const neededEl = list.querySelector(`.list__link[href="${curPageUrl}"]`);
+// neededEl.classList.add('list__link--active');
+// console.log(neededEl);
+// console.log(list.children.length);
 
 // console.log(button.dataset.test);
 
@@ -113,6 +113,23 @@ console.log(list.children.length);
 // list.insertAdjacentHTML('afterbegin', `<li>${beforeFirstEl}</li>`);
 // list.insertAdjacentHTML('beforeend', `<li>${afterLastEl}</li>`);
 // list.insertAdjacentHTML('afterend', `<h3>${afterListtext}</h3>`);
+
+//! Parants, cildren, sibling
+
+// console.group('list:');
+// console.log('list.parentNode >>', list.parentNode);
+// console.log('list.childNodes >>', list.childNodes);
+// console.log('list.children >>', list.children);
+// console.log('list.firstElementChild >>', list.firstElementChild);
+// console.log('list.firstChild >>', list.firstChild);
+// console.log('list.lastElementChild >>', list.lastElementChild);
+// console.log('list.lastChild >>', list.lastChild);
+// console.log('list.previousElementSibling >>', list.previousElementSibling);
+// console.log('list.previousSibling >>', list.previousSibling);
+// console.log('list.nextElementSibling >>', list.nextElementSibling);
+// console.log('list.nextSibling >>', list.nextSibling);
+// console.log('list.nextElementSibling >>', list.nextElementSibling);
+// console.groupEnd();
 
 //! Events
 
