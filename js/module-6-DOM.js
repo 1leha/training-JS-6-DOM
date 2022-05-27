@@ -131,6 +131,36 @@ imgDemo.before(newDiv);
 // console.log('list.nextElementSibling >>', list.nextElementSibling);
 // console.groupEnd();
 
+//! Adding elements
+
+// make new list Element + class
+const newListEl = document.createElement('li');
+newListEl.classList.add('list__item');
+
+// make new link Element + class
+const newLinkEl = document.createElement('a');
+newLinkEl.classList.add('list__link');
+newLinkEl.href = '/aaa';
+newLinkEl.textContent = 'новый элемент';
+
+newListEl.appendChild(newLinkEl);
+
+// list.appendChild(newListEl);
+list.insertBefore(newListEl, list.firstElementChild);
+
+// console.log(list);
+
+const newTitle = document.createElement('h2');
+newTitle.classList.add('title');
+newTitle.textContent = 'New Title';
+
+const newImg = document.createElement('img');
+newImg.alt = ' woow-cat ';
+newImg.src = 'https://www.5.ua/media/pictures/original/184396.jpg?t=1589796585';
+newImg.width = 300;
+
+list.append(newTitle, newImg);
+
 //! Events
 
 // button.addEventListener('click', () => {
