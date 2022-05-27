@@ -7,35 +7,57 @@
 }
 
 //! The first way of cards layout
+// import products from './cards-from-backend.js';
+
+// const makeCardLayout = ({ title, description, price }) => {
+//   const articleRef = document.createElement('article');
+
+//   const articleTitle = document.createElement('h2');
+//   articleTitle.textContent = title;
+
+//   const articleDescription = document.createElement('p');
+//   articleDescription.textContent = description;
+
+//   const articleDPrice = document.createElement('p');
+//   articleDPrice.textContent = `Price: $${price}`;
+
+//   articleRef.append(articleTitle, articleDescription, articleDPrice);
+
+//   return articleRef;
+// };
+
+// const cards = products.map(makeCardLayout);
+
+// const cardsContainer = document.querySelector('.cards-container');
+
+// cardsContainer.append(...cards);
+
+//! The second way of cards layout
 import products from './cards-from-backend.js';
 
 const makeCardLayout = ({ title, description, price }) => {
-  const articleRef = document.createElement('article');
+  //   const articleRef = document.createElement('article');
 
-  const articleTitle = document.createElement('h2');
-  articleTitle.textContent = title;
+  //   const articleTitle = document.createElement('h2');
+  //   articleTitle.textContent = title;
 
-  const articleDescription = document.createElement('p');
-  articleDescription.textContent = description;
+  //   const articleDescription = document.createElement('p');
+  //   articleDescription.textContent = description;
 
-  const articleDPrice = document.createElement('p');
-  articleDPrice.textContent = `Price: $${price}`;
+  //   const articleDPrice = document.createElement('p');
+  //   articleDPrice.textContent = `Price: $${price}`;
 
-  articleRef.append(articleTitle, articleDescription, articleDPrice);
+  //   articleRef.append(articleTitle, articleDescription, articleDPrice);
 
-  return articleRef;
+  return `<article>
+      <h2>${title}</h2>
+      <p>${description}</p>
+      <p>Price: $${price}</p>
+    </article>`;
 };
 
-// console.log(
-//   makeCardLayout({
-//     title: 'card1',
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, saepe.',
-//     price: 2000,
-//   }),
-// );
-
-const cards = products.map(makeCardLayout);
+const cards = products.map(makeCardLayout).join('');
 
 const cardsContainer = document.querySelector('.cards-container');
 
-cardsContainer.append(...cards);
+cardsContainer.insertAdjacentHTML('afterbegin', cards);
