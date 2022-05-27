@@ -134,41 +134,56 @@ imgDemo.before(newDiv);
 //! Adding elements
 
 // make new list Element + class
-const newListEl = document.createElement('li');
-newListEl.classList.add('list__item');
+// const newListEl = document.createElement('li');
+// newListEl.classList.add('list__item');
 
-// make new link Element + class
-const newLinkEl = document.createElement('a');
-newLinkEl.classList.add('list__link');
-newLinkEl.href = '/aaa';
-newLinkEl.textContent = 'новый элемент';
+// // make new link Element + class
+// const newLinkEl = document.createElement('a');
+// newLinkEl.classList.add('list__link');
+// newLinkEl.href = '/aaa';
+// newLinkEl.textContent = 'новый элемент';
 
-newListEl.appendChild(newLinkEl);
+// newListEl.appendChild(newLinkEl);
 
-// list.appendChild(newListEl);
-list.insertBefore(newListEl, list.firstElementChild);
+// // list.appendChild(newListEl);
+// list.insertBefore(newListEl, list.firstElementChild);
 
-// console.log(list);
+// // console.log(list);
 
-const newTitle = document.createElement('h2');
-newTitle.classList.add('title');
-newTitle.textContent = 'New Title';
+// const newTitle = document.createElement('h2');
+// newTitle.classList.add('title');
+// newTitle.textContent = 'New Title';
 
-const newImg = document.createElement('img');
-newImg.alt = ' woow-cat ';
-newImg.src = 'https://www.5.ua/media/pictures/original/184396.jpg?t=1589796585';
-newImg.width = 300;
+// const newImg = document.createElement('img');
+// newImg.alt = ' woow-cat ';
+// newImg.src = 'https://www.5.ua/media/pictures/original/184396.jpg?t=1589796585';
+// newImg.width = 200;
 
-list.append(newTitle, newImg);
+// list.append(newTitle, newImg);
 
-//! Events
+//! Buttons Collections render
+// make some buttons
 
-// button.addEventListener('click', () => {
-//   result.textContent = input.value;
-//   console.log(result.textContent);
+// const colorPikerOptions = [
+//   { label: 'red', color: 'red' },
+//   { label: 'blue', color: 'blue' },
+//   { label: 'tomatow', color: 'tomatow' },
+//   { label: 'green', color: 'green' },
+//   { label: 'purple', color: 'purple' },
+//   { label: 'yellow', color: 'yellow' },
+//   { label: 'violet', color: 'violet' },
+// ];
+
+// const colorPikerContainer = document.querySelector('.color-piker');
+
+// const buttons = colorPikerOptions.map(option => {
+//   const btnEl = document.createElement('button');
+//   btnEl.classList.add('button');
+//   btnEl.type = 'button';
+//   btnEl.textContent = option.label;
+//   btnEl.style.backgroundColor = option.color;
+//   return btnEl;
 // });
 
-// input.addEventListener('change', () => {
-//   result.textContent = input.value;
-//   console.log(result.textContent);
-// });
+// colorPikerContainer.append(...buttons);
+
