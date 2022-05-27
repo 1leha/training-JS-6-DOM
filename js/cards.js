@@ -36,19 +36,7 @@
 import products from './cards-from-backend.js';
 
 const makeCardLayout = ({ title, description, price }) => {
-  //   const articleRef = document.createElement('article');
-
-  //   const articleTitle = document.createElement('h2');
-  //   articleTitle.textContent = title;
-
-  //   const articleDescription = document.createElement('p');
-  //   articleDescription.textContent = description;
-
-  //   const articleDPrice = document.createElement('p');
-  //   articleDPrice.textContent = `Price: $${price}`;
-
-  //   articleRef.append(articleTitle, articleDescription, articleDPrice);
-
+  //return string of HTML layout
   return `<article>
       <h2>${title}</h2>
       <p>${description}</p>
@@ -56,8 +44,11 @@ const makeCardLayout = ({ title, description, price }) => {
     </article>`;
 };
 
+// make array of strings with our elements and join all of them to one HTML string
 const cards = products.map(makeCardLayout).join('');
 
+// define cards container
 const cardsContainer = document.querySelector('.cards-container');
 
+// insert cards into container
 cardsContainer.insertAdjacentHTML('afterbegin', cards);
