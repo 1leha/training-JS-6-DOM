@@ -52,3 +52,4 @@ const cardsContainer = document.querySelector('.cards-container');
 
 // insert cards into container
 cardsContainer.insertAdjacentHTML('afterbegin', cards);
+
