@@ -187,3 +187,61 @@ imgDemo.before(newDiv);
 
 // colorPikerContainer.append(...buttons);
 
+// function getRandomHexColor() {
+//   //   console.log(
+//   //     `#${Math.floor(Math.random() * 16777215)
+//   //       .toString(16)
+//   //       .padStart(6, 0)}`,
+//   //   );
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
+
+// // const handleClick = e => {
+// //   console.log(e);
+// //   console.log(e.type);
+// //   console.log(e.currentTarget);
+// // };
+
+// // button.addEventListener('click', handleClick);
+// button.addEventListener('click', e => {
+//   body.style.backgroundColor = getRandomHexColor();
+//   console.log(e.button);
+// });
+
+//! Moveing image by arrow keys
+let posX = 0;
+let posY = 0;
+
+document.addEventListener('keydown', event => {
+  //   console.log('Keydown: ', event);
+  //   result.textContent += `${event.key} `;
+  //   console.log(event.currentTarget);
+
+  event.preventDefault();
+
+  if (event.key === 'ArrowRight') {
+    posX += 5;
+    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+  }
+  if (event.key === 'ArrowLeft') {
+    posX -= 5;
+    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+  }
+  if (event.key === 'ArrowUp') {
+    posY -= 5;
+    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+  }
+  if (event.key === 'ArrowDown') {
+    posY += 5;
+    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+  }
+  console.log(posX, posY);
+  // translate(40px, 100px)
+  imgDemo.style.cssText = `transform: translateX(${posX}px) translateY(${posY}px)`;
+});
+
+// document.addEventListener('keyup', event => {
+//   console.log('Keyup: ', event);
+// });
