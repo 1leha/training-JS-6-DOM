@@ -2,29 +2,29 @@
 //! Working with DOM
 //!
 
-const body = document.body;
-const title = document.querySelector('.title');
-const list = document.querySelector('.list');
-const result = document.querySelector('.result');
-const imgDemo = document.querySelector('.img');
+// const body = document.body;
+// const title = document.querySelector('.title');
+// const list = document.querySelector('.list');
+// const result = document.querySelector('.result');
+// const imgDemo = document.querySelector('.img');
 
 //! Select button by class
 // const button = document.querySelector('.button');
 
 //! Select button by attribute
-const button = document.querySelector('button[data-action="setResult"]');
+// const button = document.querySelector('button[data-action="setResult"]');
 
-const input = document.querySelector('.text-input');
+// const input = document.querySelector('.text-input');
 // console.log(input);
 
 // console.log(body.querySelectorAll('.list__item'));
 
-list.style.fontSize = '24px';
+// list.style.fontSize = '24px';
 
-imgDemo.style.display = 'block';
-imgDemo.style.paddingBottom = '20px';
+// imgDemo.style.display = 'block';
+// imgDemo.style.paddingBottom = '20px';
 
-result.textContent = input.innerHTML;
+// result.textContent = input.innerHTML;
 
 // console.log(button.classList);
 // console.log(button.classList.contains('click-me'));
@@ -53,17 +53,17 @@ result.textContent = input.innerHTML;
 
 //! Adding tags
 
-const newDiv = document.createElement('div');
-newDiv.textContent = 'Hallow!';
-newDiv.style.paddingTop = '13px';
-newDiv.style.paddingBottom = '13px';
+// const newDiv = document.createElement('div');
+// newDiv.textContent = 'Hallow!';
+// newDiv.style.paddingTop = '13px';
+// newDiv.style.paddingBottom = '13px';
 // console.log(newDiv);
 
 //! Adding element to DOM
 // body.append(newDiv);
 // body.prepend(newDiv);
 // imgDemo.after(newDiv);
-imgDemo.before(newDiv);
+// imgDemo.before(newDiv);
 
 //! Removing element from DOM
 // newDiv.remove();
@@ -211,37 +211,87 @@ imgDemo.before(newDiv);
 // });
 
 //! Moveing image by arrow keys
-let posX = 0;
-let posY = 0;
+// let posX = 0;
+// let posY = 0;
 
-document.addEventListener('keydown', event => {
-  //   console.log('Keydown: ', event);
-  //   result.textContent += `${event.key} `;
-  //   console.log(event.currentTarget);
+// document.addEventListener('keydown', event => {
+//   //   console.log('Keydown: ', event);
+//   //   result.textContent += `${event.key} `;
+//   //   console.log(event.currentTarget);
 
+//   event.preventDefault();
+
+//   if (event.key === 'ArrowRight') {
+//     posX += 5;
+//     // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+//   }
+//   if (event.key === 'ArrowLeft') {
+//     posX -= 5;
+//     // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+//   }
+//   if (event.key === 'ArrowUp') {
+//     posY -= 5;
+//     // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+//   }
+//   if (event.key === 'ArrowDown') {
+//     posY += 5;
+//     // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
+//   }
+//   console.log(posX, posY);
+//   // translate(40px, 100px)
+//   imgDemo.style.cssText = `transform: translateX(${posX}px) translateY(${posY}px)`;
+// });
+
+//! Login password form
+
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
   event.preventDefault();
 
-  if (event.key === 'ArrowRight') {
-    posX += 5;
-    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
-  }
-  if (event.key === 'ArrowLeft') {
-    posX -= 5;
-    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
-  }
-  if (event.key === 'ArrowUp') {
-    posY -= 5;
-    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
-  }
-  if (event.key === 'ArrowDown') {
-    posY += 5;
-    // imgDemo.style.cssText = `transform: translateX(${posX}px translateY(${posY}px)`;
-  }
-  console.log(posX, posY);
-  // translate(40px, 100px)
-  imgDemo.style.cssText = `transform: translateX(${posX}px) translateY(${posY}px)`;
-});
+  //   console.log(event);
+  //   console.log(event.elements);
 
-// document.addEventListener('keyup', event => {
-//   console.log('Keyup: ', event);
-// });
+  //   const {
+  //     elements: { login, password },
+  //   } = event.currentTarget;
+  //   console.log(event.elements);
+  //   console.log(login);
+  //   console.log(event.currentTarget);
+
+  //   if (login.value === '' || password.value === '') {
+  //     return console.log('Please fill in all the fields!');
+  //   }
+
+  //   console.log(`Login: ${login.value}, Password: ${password.value}`);
+  //   event.currentTarget.reset();
+
+  //* Getting values from object "formData"
+  const formData = new FormData(event.currentTarget);
+  formData.forEach((value, name) => {
+    console.log(name, value);
+  });
+}
+
+//! Testing the example with change Event
+
+// const select = document.querySelector('.pizza-select');
+// const textOutput = document.querySelector('.text-output');
+// const valueOutput = document.querySelector('.value-output');
+
+// setOutput();
+
+// select.addEventListener('change', setOutput);
+
+// function setOutput() {
+//   const selectedOptionValue = select.value;
+//   const selectedOptionIndex = select.selectedIndex;
+//   const selectedOptionText = select.options[selectedOptionIndex].text;
+// //   console.log nIndex].text);
+//   console.log(document.activeElement);
+
+//   textOutput.textContent = selectedOptionText;
+//   valueOutput.textContent = selectedOptionValue;
+// } 
