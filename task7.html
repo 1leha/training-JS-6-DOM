@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+
+    <style type="text/css">
+      .red {
+        background-color: red;
+      }
+
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- https://bipbap.ru/wp-content/uploads/2021/09/1617044916_30-p-oboi-samie-krasivie-peizazhi-prirodi-31-730x456.jpg -->
+
+    <!-- https://bipbap.ru/wp-content/uploads/2021/09/1617044939_14-p-oboi-samie-krasivie-peizazhi-prirodi-15-730x411.jpg -->
+
+    <!-- https://bipbap.ru/wp-content/uploads/2021/09/1617044980_24-p-oboi-samie-krasivie-peizazhi-prirodi-25-730x456.jpg -->
+
+    <!-- https://bipbap.ru/wp-content/uploads/2021/09/1617044931_41-p-oboi-samie-krasivie-peizazhi-prirodi-42-730x411.jpg -->
+
+    <!-- https://bipbap.ru/wp-content/uploads/2021/09/1617044998_49-p-oboi-samie-krasivie-peizazhi-prirodi-52-730x487.jpg -->
+    <div class="wrapper">
+      <button class="open-modal-button button" data-modal="open">Open gallery</button>
+    </div>
+
+    <div class="backdrop close">
+      <div class="modal">
+        <div class="modal__gallery gallery">
+          <button class="modal__button-left-scroll button-nav button" data-scroll="left"><</button>
+
+          <ul class="gallery__image-list">
+            <li class="gallery__image-item">
+              <img
+                class="gallery__image"
+                width="500"
+                src="https://bipbap.ru/wp-content/uploads/2021/09/1617044916_30-p-oboi-samie-krasivie-peizazhi-prirodi-31-730x456.jpg"
+                alt="Пейзаж 1"
+              />
+            </li>
+
+            <li class="gallery__image-item">
+              <img
+                class="gallery__image"
+                width="500"
+                src="https://bipbap.ru/wp-content/uploads/2021/09/1617044939_14-p-oboi-samie-krasivie-peizazhi-prirodi-15-730x411.jpg"
+                alt="Пейзаж 2"
+              />
+            </li>
+
+            <li class="gallery__image-item gallery__image-item--active">
+              <img
+                class="gallery__image"
+                width="500"
+                src="https://bipbap.ru/wp-content/uploads/2021/09/1617044980_24-p-oboi-samie-krasivie-peizazhi-prirodi-25-730x456.jpg"
+                alt="Пейзаж 3"
+              />
+            </li>
+
+            <li class="gallery__image-item">
+              <img
+                class="gallery__image"
+                width="500"
+                src="https://bipbap.ru/wp-content/uploads/2021/09/1617044931_41-p-oboi-samie-krasivie-peizazhi-prirodi-42-730x411.jpg"
+                alt="Пейзаж 4"
+              />
+            </li>
+
+            <li class="gallery__image-item">
+              <img
+                class="gallery__image"
+                width="500"
+                src="https://bipbap.ru/wp-content/uploads/2021/09/1617044998_49-p-oboi-samie-krasivie-peizazhi-prirodi-52-730x487.jpg"
+                alt="Пейзаж 5"
+              />
+            </li>
+          </ul>
+          <button class="modal__button-right-scroll button-nav button" data-scroll="right">
+            >
+          </button>
+        </div>
+
+        <button class="close-modal-button button" data-modal="close">Close gallery</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="./js/module-6-DOM-task7.js" type="module"></script>
+  </body>
+</html>
