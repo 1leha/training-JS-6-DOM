@@ -22,7 +22,7 @@ function onModalOpen() {
 function onModalClose() {
   console.log('Закрыть модалку');
 
-  document.removeEventListener('keydown', onEscPress);
+  document.removeEventListener('keydown', onEscPress); 
   document.removeEventListener('keydown', onLeftArrowKey);
   document.removeEventListener('keydown', onRightArrowKey);
 
